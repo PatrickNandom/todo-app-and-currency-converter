@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+    <h1>Edit your Item</h1>
+
+    <% tasks.forEach((todo, position)=> { %>
+        <form action="/update:/<%= position%>" method="post">
+            <input type="text" name="todo" placeholder="Edit your item" required>
+            <button type="submit">Done</button>
+        </form>
+        <% }); %>
+</body>
+
+</html>
